@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>user interface shopping cart</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            padding: 0;
+
+        }
+
+        #navbar {
+            background-color: rgb(99, 224, 99);
+            overflow: hidden;
+        }
+
+        #navbar a {
+            float: left;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+
+        }
+
+        .avatar-logo {
+            display: flex;
+            padding: 5px;
+            border-radius: 20%;
+            position: absolute;
+            left: 1310px;
+        }
+
+        .avatar-logo img {
+            width: 40px;
+            /* Adjust the size as needed */
+            height: 40px;
+            /* Adjust the size as needed */
+            border-radius: 50%;
+
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: green;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        .shopping {
+            color: #024F9D;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 25px;
+            position: absolute;
+            left: 170px;
+        }
+
+        .cart {
+            color: #61B846;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            left: 170px;
+            top: 90px;
+        }
+
+        .del-icon {
+            position: absolute;
+            left: 1100px;
+            top: 80px;
+
+        }
+
+        .del-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .grocery-items {
+            position: absolute;
+            top: 200px;
+            left: 180px;
+        }
+
+        h5 {
+            color: #000;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 230px;
+
+        }
+
+        .no1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            left: 550px;
+            top: 25px;
+        }
+
+
+        .img1 {
+            position: absolute;
+        }
+
+        .img1 img {
+            width: 200px;
+            height: 120px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 1px solid #61B846;
+
+        }
+
+        .quantity {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            border-radius: 2px;
+            background: #D4D3D3;
+            position: absolute;
+            top: 60px;
+            left: 540px;
+            width: 32px;
+            height: 20px;
+        }
+
+        .price1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 35px;
+            left: 900px;
+        }
+
+        .minus1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 510px;
+        }
+
+        .plussign1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 37px;
+            left: 590px;
+
+        }
+
+        .grocery-items2 {
+            position: absolute;
+            top: 350px;
+            left: 180px;
+        }
+
+        h5 {
+            color: #000;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 230px;
+
+        }
+
+        .no2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            left: 550px;
+            top: 25px;
+        }
+
+
+        .img2 {
+            position: absolute;
+        }
+
+        .img2 img {
+            width: 200px;
+            height: 120px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 1px solid #61B846;
+
+        }
+
+        .quantity2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            border-radius: 2px;
+            background: #D4D3D3;
+            position: absolute;
+            top: 60px;
+            left: 540px;
+            width: 32px;
+            height: 20px;
+        }
+
+        .price2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 35px;
+            left: 900px;
+        }
+
+        .minus2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 510px;
+        }
+
+        .plussign2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 37px;
+            left: 590px;
+
+        }
+
+        .grocery-items3 {
+            position: absolute;
+            top: 500px;
+            left: 180px;
+        }
+
+        h5 {
+            color: #000;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 230px;
+
+        }
+
+        .no3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            left: 550px;
+            top: 25px;
+        }
+
+
+        .img3 {
+            position: absolute;
+        }
+
+        .img3 img {
+            width: 200px;
+            height: 120px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 1px solid #61B846;
+
+        }
+
+        .quantity3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            border-radius: 2px;
+            background: #D4D3D3;
+            position: absolute;
+            top: 60px;
+            left: 540px;
+            width: 32px;
+            height: 20px;
+        }
+
+        .price3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 35px;
+            left: 900px;
+        }
+
+        .minus3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 12px;
+            left: 510px;
+        }
+
+        .plussign3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            position: absolute;
+            top: 37px;
+            left: 590px;
+        }
+
+        .line {
+            background: #BFBCBC;
+            box-shadow: 2px 4px 4px 0px #BFBCBC;
+            width: 1000px;
+            height: 1px;
+            position: absolute;
+            top: 130px;
+            left: 1px;
+
+        }
+
+        .line img {
+            width: 328px;
+            height: 1px;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+        }
+
+        .form-group {
+            position: relative;
+            margin: 70px;
+        }
+
+        .form-group input {
+            width: 800px;
+            padding: -100px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+            margin-top: -90px;
+
+
+        }
+
+        .form-atbottom {
+            position: absolute;
+            top: 700px;
+            left: 200px;
+        }
+
+        .total p {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 650px;
+            left: 300px;
+        }
+
+        .total h3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 650px;
+            left: 1100px;
+        }
+
+        .logout-button {
+            display: block;
+            width: 400px;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            background-color: rgb(101, 223, 101);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 1080px;
+            left: 700px;
+            transform: translateX(-50%);
+        }
+
+        .logout-button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a href="#">
+            <i class="fas fa-home icon"></i> <b>Home</b>
+        </a>
+
+        <a href="#">
+            <i class="fas fa-shopping-cart icon"></i><b>cart</b>
+        </a>
+        <a href="#">
+            <i class="fas fa-user-circle icon"></i> <b>Account</b>
+        </a>
+        <div class="avatar-logo">
+            <img src="./images/logo.png">
+        </div>
+    </div>
+    <!--shopping cart-->
+    <div class="shopping">
+        <h2>Shopping</h2>
+    </div>
+    <div class="cart">
+        <h3><b>Cart</b></h3>
+    </div>
+    <div class="del-icon">
+        <img src="./images/Frame.jpg">
+    </div>
+
+    <!--grocery items list-->
+    <div class="grocery-items">
+        <div class="img1"><img src="./images/Rectangle 12.png"></div>
+        <!--text along image1-->
+        <h5>ItemName</h5>
+        <div class="quantity">
+
+        </div>
+        <p class="minus1">-</p>
+        <p class="plussign1">+</p>
+        <h6 class="no1">1</h6>
+        <div class="price1">
+            <p>$25.00</p>
+        </div>
+
+    </div>
+    <div class="grocery-items2">
+        <div class="img2"><img src="./images/Rectangle 13.png"></div>
+        <!--text along image1-->
+        <h5>ItemName</h5>
+        <div class="quantity2">
+
+        </div>
+        <p class="minus2">-</p>
+        <p class="plussign2">+</p>
+        <h6 class="no2">1</h6>
+        <div class="price2">
+            <p>$45.00</p>
+        </div>
+
+    </div>
+    <div class="grocery-items3">
+        <div class="img3"><img src="./images/Rectangle 14.png"></div>
+        <!--text along image1-->
+        <h5>ItemName</h5>
+        <div class="quantity3">
+
+        </div>
+        <p class="minus3">-</p>
+        <p class="plussign3">+</p>
+        <h6 class="no3">2</h6>
+        <div class="price3">
+            <p>$35.00</p>
+        </div>
+        <div class="line">
+            <img src="./images/Line 7.png">
+        </div>
+    </div>
+    </div>
+    <div class="total">
+        <p>Total</p>
+        <h3>$180</h3>
+    </div>
+    <div class="form-atbottom">
+        <form>
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="contact" name="contact" placeholder="Email" required>
+
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Shipping Address" required>
+            </div>
+        </form>
+    </div>
+    <div>
+        <button class="logout-button">Place Order</button>
+    </div>
+</body>
+
+</html>

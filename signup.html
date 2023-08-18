@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <title>Saylani Welfare signup</title>
@@ -8,25 +9,28 @@
   <style>
     body {
       text-align: center;
-       margin: 0; /* Remove default body margin */
-      padding: 0; /* Remove default body padding */
+      margin: 0;
+      /* Remove default body margin */
+      padding: 0;
+      /* Remove default body padding */
       text-align: center;
       margin: 20px;
     }
 
     h1 {
       color: rgb(99, 224, 99);
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-line-height: 1.5;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 1.5;
     }
 
     h4 {
       color: rgb(19, 19, 99);
-     line-height: 0; /* Adjust line spacing for h2 */
-     margin-top:-20px;
+      line-height: 0;
+      /* Adjust line spacing for h2 */
+      margin-top: -20px;
     }
- 
-    
+
+
     .form-group {
       position: relative;
       margin: 70px;
@@ -38,21 +42,22 @@ line-height: 1.5;
       border: none;
       border-bottom: 1px solid #ccc;
       outline: none;
-      margin-top:-90px;
-      
-    
+      margin-top: -90px;
+
+
     }
 
     .icon-container {
       position: absolute;
       right: 420px;
       bottom: 5px;
-    
+
     }
 
     .icon-container i {
       color: #999;
     }
+
     .sign-up-button {
       background-color: rgb(104, 230, 104);
       color: white;
@@ -61,149 +66,174 @@ line-height: 1.5;
       border-radius: 4px;
       cursor: pointer;
     }
+
     .options-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top:-70px;
-      padding:20px;
-      padding-left:30px;
-      margin-right:20px
+      margin-top: -70px;
+      padding: 20px;
+      padding-left: 30px;
+      margin-right: 20px
     }
 
     .options-container input[type="radio"] {
       margin: 5px;
     }
+
     .container {
       margin: 10px;
     }
 
     .container button {
-      background-color: rgb(99, 224, 99); /* Green background color */
-      color: white; /* Text color */
-      padding: 10px 80px; /* Padding around the text */
-      border: none; /* Remove button border */
-      border-radius: 9px; /* Rounded corners */
-      cursor: pointer; /* Cursor on hover */
-      font-size: 20px; /* Font size of the button text */
+      background-color: rgb(99, 224, 99);
+      /* Green background color */
+      color: white;
+      /* Text color */
+      padding: 10px 80px;
+      /* Padding around the text */
+      border: none;
+      /* Remove button border */
+      border-radius: 9px;
+      /* Rounded corners */
+      cursor: pointer;
+      /* Cursor on hover */
+      font-size: 20px;
+      /* Font size of the button text */
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       box-shadow: 0 6px 9px rgba(110, 109, 109, 0.3);
     }
 
     .container button:hover {
-      background-color: darkgreen; /* Darker green on hover */
+      background-color: darkgreen;
+      /* Darker green on hover */
     }
-    
   </style>
 </head>
+
 <body>
   <h1>SAYLANI WELFARE</h1>
   <h4>ONLINE MARKET PLACE</h3>
     <form>
-        <div class="form-group">
-          <input type="text" id="username" name="username" placeholder="User Name" required >
-          <div class="icon-container">
-            <i class="fas fa-user icon"></i>
-          </div>
+      <div class="form-group">
+        <input type="text" id="username" name="username" placeholder="User Name" required>
+        <div class="icon-container">
+          <i class="fas fa-user icon"></i>
         </div>
-        <div class="form-group">
-            <input type="text" id="contact" name="contact" placeholder="Contact" required >
-            <div class="icon-container">
-              <i class="fas fa-phone"></i>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <div class="icon-container">
-              <i class="fas fa-envelope icon"></i>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <div class="icon-container">
-              <i class="fas fa-lock icon" id="togglePassword" onclick="togglePasswordVisibility()"></i>
-            </div>
-          </div>
-        
-          
-      </form>
+      </div>
+      <div class="form-group">
+        <input type="text" id="contact" name="contact" placeholder="Contact" required>
+        <div class="icon-container">
+          <i class="fas fa-phone"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="icon-container">
+          <i class="fas fa-envelope icon"></i>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <div class="icon-container">
+          <i class="fas fa-lock icon" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+        </div>
+      </div>
+
+
+    </form>
     <div class="container">
-        <button onclick="signup()">Sign Up</button>
-        <!-- <button onclick="logIn()">Login</button> -->
+      <button onclick="signup()">Sign Up</button>
+      <!-- <button onclick="logIn()">Login</button> -->
     </div>
-    <h6 style="margin-bottom: -20px; margin-top: -5px; font-size: 15px; color:blue;">Already have an account?<a href=salessignin.html style="color:blue;text-decoration: none;">Login</a></h4>
+    <h6 style="margin-bottom: -20px; margin-top: -5px; font-size: 15px; color:blue;">Already have an account?<a
+        href=salessignin.html style="color:blue;text-decoration: none;">Login</a>
+  </h4>
 
-  
 
-    <!-- Add Firebase JavaScript SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 
-    <script type="text/javascript">
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-    apiKey: "AIzaSyApMbd9Sncf9LWCqPLWS6Vj1Bm7beaOKF4",
-    authDomain: "smit-project-751b0.firebaseapp.com",
-    projectId: "smit-project-751b0",
-    storageBucket: "smit-project-751b0.appspot.com",
-    messagingSenderId: "824922240767",
-    appId: "1:824922240767:web:e6f9a800f7f2a10c3a3eca",
-    measurementId: "G-2T2Q9N891D"
-  };
+  <!-- Add Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        // Initialize Realtime Database and get a reference to the service
-        const database = firebase.database();
+  <script type="text/javascript">
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDF7xdYTZDlGUh7R1q1_RhwRc5eQKiKnsE",
+      authDomain: "saylaniwebsite-f4421.firebaseapp.com",
+      projectId: "saylaniwebsite-f4421",
+      storageBucket: "saylaniwebsite-f4421.appspot.com",
+      messagingSenderId: "952338450713",
+      appId: "1:952338450713:web:529a02ac57494d46061d88",
+      measurementId: "G-PB5Y9NPBQ4"
+    };
 
-        function signup() {
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            firebase.auth().createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    // Signed in 
-                    var user = userCredential.user;
-                    writeUserData(user.uid, email, password);
-                    console.log("user created successfully.... \n", user)
-                    
-                    // ...
-                })
-                .catch((error) => {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    console.error("Login error:", errorCode, errorMessage);
-                });
-        }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Initialize Realtime Database and get a reference to the service
+    const database = firebase.database();
 
-        // function logIn() {
-        //     let email = document.getElementById("name").value;
-        //     let password = document.getElementById("password").value;
+    const signup = () => {
+    let username = document.getElementById('username').value;
+    let contact = document.getElementById('contact').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let role = 'User'
 
-        //     firebase.auth().signInWithEmailAndPassword(email, password)
-        //         .then((userCredential) => {
-        //                 var user = userCredential.user;
-        //                 console.log('User signed in successfully... \n', user);
-
-        //         })
-        //         .catch((error) => {
-        //             var errorCode = error.code;
-        //             var errorMessage = error.message;
-        //             console.log("Login error:", errorCode, errorMessage);
-        //         });
-        // }
-
-        function writeUserData(userId, email, password) {
-            firebase.database().ref('users/' + userId).set({
-                userId: userId,
+    console.log(email, password)
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            let user = userCredential.user;
+            firebase.database().ref('users/' + user.uid).set({
+                uid: user.uid,
+                username: username,
+                role: role,
+                contact: contact,
                 email: email,
                 password: password
-            });
-        }
-    </script>
+            })
+                .then(() => {
+                    const user = { email: email };
+                    localStorage.setItem('user', JSON.stringify(user));
+                    console.log('User created successfully.')
+                    window.location.href = ''
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        })
+        .catch((error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            console.log(errorCode + ': ' + errorMessage)
+        });
+}
+
+    // function logIn() {
+    //     let email = document.getElementById("name").value;
+    //     let password = document.getElementById("password").value;
+
+    //     firebase.auth().signInWithEmailAndPassword(email, password)
+    //         .then((userCredential) => {
+    //                 var user = userCredential.user;
+    //                 console.log('User signed in successfully... \n', user);
+
+    //         })
+    //         .catch((error) => {
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
+    //             console.log("Login error:", errorCode, errorMessage);
+    //         });
+    // }
+
+    function writeUserData(userId, email, password) {
+      firebase.database().ref('users/' + userId).set({
+        userId: userId,
+        email: email,
+        password: password
+      });
+    }
+  </script>
 </body>
 
 </html>
-     
-      
-        
-

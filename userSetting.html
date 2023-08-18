@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <title>user interface setting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      padding: 0;
+
+    }
+
+    #navbar {
+      background-color: rgb(99, 224, 99);
+      overflow: hidden;
+    }
+
+
+    #navbar a {
+      float: left;
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      margin-right: 20px;
+
+    }
+
+    .avatar-logo {
+      display: flex;
+      padding: 3px;
+      border-radius: 40%;
+      margin-right: 80px;
+    }
+
+    .avatar-logo img {
+      width: 50px;
+      /* Adjust the size as needed */
+      height: 50px;
+      /* Adjust the size as needed */
+      border-radius: 50%;
+
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: green;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    h2 {
+      color: #024F9D;
+      font-family: Inter;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+
+    }
+
+
+    .profile-logo {
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+
+    }
+
+    .profile-logo img {
+      border-radius: 100%;
+      width: 100px;
+      border: 1px solid #61B846;
+
+    }
+
+
+    .form-group {
+      position: relative;
+      margin: 70px;
+    }
+
+    .form-group input {
+      width: 230px;
+      padding: -100px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: none;
+      margin-top: -90px;
+
+
+    }
+
+    .icon-container {
+      position: absolute;
+      right: 500px;
+      bottom: 5px;
+
+    }
+
+    .icon-container i {
+      color: #999;
+    }
+
+    h3 {
+      color: #024F9D;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 10px;
+      /* 125% */
+    }
+
+    .heading {
+      position: absolute;
+      right: 800px;
+      top: 320px;
+    }
+
+    .order-rate {
+      position: absolute;
+      right: 720px;
+      top: 340px;
+
+    }
+    .order-rate2{
+      position: absolute;
+      right: 720px;
+      top: 460px;
+    }
+
+    .title {
+      color: #000;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      /* 125% */
+    }
+
+    .pending {
+      position: absolute;
+      top: 25px;
+      color: #000;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      /* 250% */
+    }
+
+    .item-name {
+      position: absolute;
+      top: 50px;
+      color: #BFBFBF;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px;
+    }
+
+    .total {
+      color: #000;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+      position: absolute;
+      top: 25px;
+    }
+
+    .QR-code {
+      position: absolute;
+      left: 300px;
+      top: 5px;
+      color: #000;
+      text-align: right;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      /* 250% */
+    }
+
+    .rate {
+      position: absolute;
+      left: 300px;
+      top: 75px;
+      color: #61B846;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+    }
+    .rectangle{
+      position: absolute;
+      top:450px;
+      left:510px;
+    }
+    .rectangle2{
+      position: absolute;
+      top:570px;
+      left:510px;
+
+    }
+
+    .logout-button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      color: #fff;
+      border: none;
+      background-color: rgb(101, 223, 101);
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logout-button:hover {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="#">
+      <i class="fas fa-home icon"></i> <b>Home</b>
+    </a>
+
+    <a href="#">
+      <i class="fas fa-shopping-cart icon"></i><b>cart</b>
+    </a>
+    <a href="#">
+      <i class="fas fa-user-circle icon"></i> <b>Account</b>
+    </a>
+
+  </div>
+  <!--setting page start here-->
+  <h2><b>Settings</b></h2>
+  <!--div for logo-->
+  <div class="container">
+    <div class="profile-logo">
+      <img src="./images/logo.png">
+    </div>
+  </div>
+  <!--form to update name-->
+  <div class="form-group">
+    <input type="text" id="username" name="username" placeholder="Update full name" required>
+    <div class="icon-container">
+      <i class="fas fa-check icon"></i>
+    </div>
+  </div>
+  <div class="heading">
+    <h3>Orders</h3>
+  </div>
+  <!--text div 1-->
+  <div class="order-rate">
+    <div class="title">
+      <h4>Urooj Khalid</h4>
+      <div class="pending">
+        <h6>Just Now-Pending</h6>
+      </div>
+      <div class="item-name">
+        <h5>2 x ITEM NAME</br>
+          3 x ITEM NAME
+        </h5>
+        <div class="total">
+          <h4><b>Total</b></h4>
+        </div>
+      </div>
+      <div class="QR-code">
+        <h4>03022004480</h4>
+      </div>
+      <div class="rate">
+        <h4>$185.00</h4>
+      </div>
+    </div>
+  </div>
+  <div class="rectangle">
+    <img src="./images/Rectangle 50.png">
+  </div>
+  <div class="order-rate2">
+    <div class="title">
+      <h4>Urooj Khalid</h4>
+      <div class="pending">
+        <h6>2 feb 2023-in Progress</h6>
+      </div>
+      <div class="item-name">
+        <h5>2 x ITEM NAME</br>
+          3 x ITEM NAME
+        </h5>
+        <div class="total">
+          <h4><b>Total</b></h4>
+        </div>
+      </div>
+      <div class="QR-code">
+        <h4>03022004480</h4>
+      </div>
+      <div class="rate">
+        <h4>$43.50</h4>
+      </div>
+    </div>
+  </div>
+  <div class="rectangle2">
+    <img src="./images/Rectangle 50.png">
+  </div>
+  
+  <!--logout button-->
+  <div>
+    <button class="logout-button">Logout</button>
+  </div>
+
+</body>
+
+</html>

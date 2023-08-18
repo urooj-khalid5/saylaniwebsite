@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <title>Admin interface setting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+      padding: 0;
+
+    }
+
+    #navbar {
+      background-color: rgb(99, 224, 99);
+      overflow: hidden;
+    }
+
+    #navbar a {
+      float: left;
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      margin-right: 20px;
+
+    }
+
+    .avatar-logo {
+      display: flex;
+      padding: 3px;
+      border-radius: 40%;
+      margin-right: 80px;
+    }
+
+    .avatar-logo img {
+      width: 50px;
+      /* Adjust the size as needed */
+      height: 50px;
+      /* Adjust the size as needed */
+      border-radius: 50%;
+
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: green;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    h2 {
+      color: #024F9D;
+      font-family: Inter;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+
+    }
+
+
+    .profile-logo {
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+
+    }
+
+    .profile-logo img {
+      border-radius: 100%;
+      width: 100px;
+      border: 1px solid #61B846;
+
+    }
+
+
+    .form-group {
+      position: absolute;
+      top: 180px;
+      left: 500px;
+      margin: 70px;
+    }
+
+    .form-group input {
+      width: 230px;
+      padding: -100px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: none;
+      margin-top: -90px;
+    }
+
+    .icon-container {
+      position: absolute;
+      left: 210px;
+      top: 1px;
+
+    }
+
+    .icon-container i {
+      color: #999;
+    }
+
+    .div1 {
+
+      width: 274px;
+      height: 86px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: #D9D9D9;
+      position: absolute;
+      left: 550px;
+      top: 290px;
+    }
+
+    .cam-icon {
+      opacity: 0.4;
+      width: 34px;
+      height: 60px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 120px;
+      top: 10px;
+
+    }
+
+    .div2 {
+      border-radius: 15px;
+      background: #D9D9D9;
+      width: 200px;
+      height: 41px;
+      flex-shrink: 0;
+      position: absolute;
+      left: 555px;
+      top: 390px;
+    }
+
+    p {
+      color: #BDBABA;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+      position: absolute;
+      top: -8px;
+      left: 27px;
+    }
+
+    .green-button {
+      width: 55.025px;
+      height: 41px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: #61B846;
+      position: absolute;
+      top: 390px;
+      left: 770px;
+    }
+
+    .Add p {
+      width: 45.725px;
+      height: 27.703px;
+      color: #faf6f6;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+      position: absolute;
+      top: -5px;
+      left: 5px;
+    }
+
+    h3 {
+      color: #024F9D;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+      width: 184px;
+      height: 28px;
+      position: absolute;
+      top: 415px;
+      left: 530px;
+    }
+
+    .main1 {
+      border-radius: 15px;
+      border: 1px solid #65BD50;
+      background: #FFF;
+      width: 285px;
+      height: 57px;
+      position: absolute;
+      left: 550px;
+      top: 470px;
+    }
+
+    .fruits  {
+      width: 44px;
+      height: 25px;
+      position: absolute;
+
+    }
+    .fruits img{
+      width: 50px;
+      position: absolute;
+      left: 20px;
+      top: 8px;
+    }
+
+    h4 {
+      color: #65BD50;
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+      width: 95px;
+      position: absolute;
+      left: 60px;
+      top: -6px;
+    }
+    .main2 {
+      border-radius: 15px;
+      border: 1px solid #65BD50;
+      background: #FFF;
+      width: 285px;
+      height: 57px;
+      position: absolute;
+      left: 550px;
+      top: 545px;
+    }
+
+    .meat  {
+      width: 44px;
+      height: 25px;
+      position: absolute;
+
+    }
+    .meat img{
+      width: 50px;
+      position: absolute;
+      left: 20px;
+      top: 18px;
+    }
+
+    .main3 {
+      border-radius: 15px;
+      border: 1px solid #65BD50;
+      background: #FFF;
+      width: 285px;
+      height: 57px;
+      position: absolute;
+      left: 550px;
+      top: 620px;
+    }
+
+    .vegeies {
+      width: 44px;
+      height: 25px;
+      position: absolute;
+
+    }
+    .vegeies img{
+      width: 50px;
+      position: absolute;
+      left: 20px;
+      top: 18px;
+    }
+    .main4 {
+      border-radius: 15px;
+      border: 1px solid #65BD50;
+      background: #FFF;
+      width: 285px;
+      height: 57px;
+      position: absolute;
+      left: 550px;
+      top: 690px;
+    }
+
+    .logout-button {
+      display: block;
+      width: 320px;
+      padding: 10px;
+      color: #fff;
+      border: none;
+      background-color: rgb(101, 223, 101);
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      bottom: -90px;
+      left: 690px;
+      transform: translateX(-50%);
+    }
+
+    .logout-button:hover {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="#">
+      <i class="fas fa-home icon"></i> <b>Home</b>
+    </a>
+
+    <a href="#">
+      <i class="fas fa-plus"></i> <b>Add items</b>
+    </a>
+    <a href="#">
+      <i class="fas fa-user-circle icon"></i> <b>Account</b>
+    </a>
+
+  </div>
+  <!--setting page start here-->
+  <h2><b>Settings</b></h2>
+  <!--div for logo-->
+  <div class="container">
+    <div class="profile-logo">
+      <img src="./images/logo.png">
+    </div>
+  </div>
+  <!--form to update name-->
+  <div class="form-group">
+    <input type="text" id="username" name="username" placeholder="Update full name" required>
+    <div class="icon-container">
+      <i class="fas fa-check icon"></i>
+    </div>
+  </div>
+  <div class="div1">
+    <div class="cam-icon">
+      <img src="./images/image 22.png">
+    </div>
+  </div>
+  <div class="div2">
+    <p>new category name</p>
+  </div>
+  <div class="green-button">
+    <div class="Add">
+      <p>ADD</p>
+    </div>
+  </div>
+  <h3>All Categories</h3>
+  <div class="main1">
+    <div class="fruits">
+      <img src="./images/image 13.png">
+      <h4>Fruits</h4>
+    </div>
+
+  </div>
+  <div class="main2">
+    <div class="meat">
+      <img src="./images/image 15.png">
+      <h4>Meat</h4>
+    </div>
+  </div>
+
+  <div class="main3">
+    <div class="vegeies">
+      <img src="./images/image 16.png">
+      <h4>Vegetables</h4>
+    </div>
+
+  </div>
+  <div class="main4">
+    <div class="unknown">
+      <h4>Vegetables</h4>
+    </div>
+
+  </div>
+
+
+
+
+  <!--logout button-->
+  <div>
+    <button class="logout-button">Logout</button>
+  </div>
+
+</body>
+
+</html>

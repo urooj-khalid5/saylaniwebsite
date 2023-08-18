@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Admin Add New items</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            padding: 0;
+
+        }
+
+        #navbar {
+            background-color: rgb(99, 224, 99);
+            overflow: hidden;
+        }
+
+
+        #navbar a {
+            float: left;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+
+        }
+
+        .avatar-logo {
+            display: flex;
+            padding: 3px;
+            border-radius: 40%;
+            margin-right: 80px;
+        }
+
+        .avatar-logo img {
+            width: 100px;
+            /* Adjust the size as needed */
+            height: 100px;
+            /* Adjust the size as needed */
+            border-radius: 50%;
+            border: 1px solid #61B846;
+            position: absolute;
+            top: 70px;
+            left: 40px;
+        }
+
+        .notes-icon {
+            position: absolute;
+            left: 1320px;
+            top: 1px;
+
+        }
+
+        .notes-icon img {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: green;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+
+        .profile-name {
+            position: absolute;
+            left: 170px;
+            top: 60px;
+        }
+
+        h1 {
+            color: #024F9D;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            /* 100% */
+        }
+
+        p {
+            color: #61B846;
+            font-family: Inter;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 20px;
+        }
+
+        .div1 {
+
+            width: 344px;
+            height: 143px;
+            flex-shrink: 0;
+            border-radius: 15px;
+            background: #D9D9D9;
+            position: absolute;
+            left: 555px;
+            top: 140px;
+        }
+
+        .cam-icon img {
+            opacity: 0.4;
+            width: 78px;
+            height: 89px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 134px;
+            top: 17px;
+
+        }
+
+        .div2 {
+            border-radius: 15px;
+            background: #D9D9D9;
+            width: 343px;
+            height: 41px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 555px;
+            top: 290px;
+        }
+
+        .div2 p {
+            color: #BDBABA;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: -8px;
+            left: 27px;
+        }
+
+        .div3 {
+            border-radius: 15px;
+            background: #D9D9D9;
+            width: 343px;
+            height: 41px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 555px;
+            top: 340px;
+        }
+
+        .div3 p {
+            color: #BDBABA;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: -8px;
+            left: 27px;
+        }
+
+        .div3 img {
+            width: 27px;
+            height: 27px;
+            position: absolute;
+            top: 8px;
+            left: 300px;
+        }
+
+        .div4 {
+            border-radius: 15px;
+            background: #D9D9D9;
+            width: 343px;
+            height: 118px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 555px;
+            top: 390px;
+        }
+
+        .div4 p {
+            color: #BDBABA;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: -8px;
+            left: 27px;
+        }
+
+        .unit-name-div {
+            width: 161px;
+            height: 31px;
+            border-radius: 15px;
+            background: #D9D9D9;
+            position: absolute;
+            top: 515px;
+            left: 730px;
+        }
+
+        .unit-name h4 {
+            color: #024F9D;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 490px;
+            left: 560px;
+        }
+
+        .unit-name-div p {
+            color: #BDBABA;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: -15px;
+            left: 20px;
+        }
+
+        .unit-price-div {
+            width: 161px;
+            height: 31px;
+            border-radius: 15px;
+            background: #D9D9D9;
+            position: absolute;
+            top: 555px;
+            left: 730px;
+        }
+
+        .unit-price h4 {
+            color: #024F9D;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 530px;
+            left: 560px;
+        }
+
+        .unit-price-div p {
+            color: #BDBABA;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: -15px;
+            left: 20px;
+        }
+
+        h2 {
+            color: #024F9D;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+            position: absolute;
+            top: 90px;
+            left: 560px;
+        }
+
+        .Addproduct-button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            background-color: rgb(101, 223, 101);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 1px;
+            left: 730px;
+            transform: translateX(-50%);
+        }
+
+        .Addproduct-button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a href="#">
+            <i class="fas fa-home icon"></i> <b>Home</b>
+        </a>
+
+        <a href="#">
+            <i class="fas fa-plus"></i> <b>Add items</b>
+        </a>
+        <a href="#">
+            <i class="fas fa-user-circle icon"></i> <b>Account</b>
+        </a>
+        <div class="notes-icon">
+            <img src="./images/notes.png">
+        </div>
+    </div>
+    <div class="avatar-logo">
+        <img src="./images/logo.png">
+        <div class="profile-name">
+            <h1>UROOJ KHALID</h1>
+            <p>Admin</p>
+        </div>
+    </div>
+    <h2>Add New Items</h2>
+    <div class="div1">
+        <div class="cam-icon">
+            <img src="./images/image 22.png">
+        </div>
+    </div>
+    <div class="div2">
+        <p>item name</p>
+    </div>
+    <div class="div3">
+        <p>Select category</p>
+        <img src="./images/image 23.png">
+    </div>
+    <div class="div4">
+        <p>Describe this item</p>
+    </div>
+    <div class="unit-name">
+        <h4>Unit Name:</h4>
+        <div class="unit-name-div">
+            <p>Pcs. / Kg / dozen</p>
+        </div>
+    </div>
+    <div class="unit-price">
+        <h4>Unit Price:</h4>
+        <div class="unit-price-div">
+            <p>$3.22</p>
+        </div>
+    </div>
+
+
+    <!--Add Product button-->
+    <div>
+        <button class="Addproduct-button">Add Product</button>
+    </div>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

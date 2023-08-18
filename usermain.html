@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Welfare - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            background-color: rgb(99, 224, 99);
+            overflow: hidden;
+        }
+
+
+        #navbar a {
+            float: left;
+            display: flex;
+            align-items: center;
+            padding: 14px 20px;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+
+        }
+        .cart-icon {
+            position: absolute;
+            left: 1300px;
+            top: 5px;
+
+        }
+
+        .cart-icon img {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .main-heading {
+            color: #61B846;
+            text-align: left;
+            margin: 20px 0;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+        }
+
+        .sub-heading {
+            color: #024F9D;
+            text-align: left;
+            margin: 20px 0;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        .main-image {
+            max-width: 100%;
+            margin: 20px 0;
+            flex-shrink: 0;
+            border-radius: 15px;
+            height: 500px;
+            width: 1300px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            border-radius: 30px;
+            background-color: rgba(217, 217, 217, 0.75);
+            opacity: 0.8;
+            padding: 8px;
+        }
+
+        #product-search {
+            padding: 8px;
+            width: 250px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+            background-color: transparent;
+        }
+
+        .search-button {
+            padding: 6px 10px;
+            background-color: rgba(232, 231, 231, 0.75);
+            border: none;
+            opacity: 1;
+            cursor: pointer;
+            color: #929191;
+            font-size: 16px;
+
+        }
+
+        .categories {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            max-width: 180px;
+        }
+
+        .category img {
+            max-width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .category p {
+            padding: 10px 0;
+            margin: 0;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+        }
+
+        .Shop-items {
+            width: 115px;
+            height: 82px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 70px;
+            top: 1080px;
+
+        }
+
+        .meat img {
+            width: 200px;
+        }
+
+        .meat2 img {
+            width: 200px;
+
+        }
+
+        .fish img {
+            width: 200px;
+
+        }
+
+        .Qeema img {
+            width: 200px;
+
+        }
+
+        .title1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 8px;
+            left: 220px;
+        }
+
+        .heading1 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+
+        }
+
+        .rate1 {
+            position: absolute;
+            left: 450px;
+            top: 9px;
+        }
+
+        .text1 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            left: 2px;
+            top: 40px;
+        }
+
+        .single-line {
+            white-space: nowrap;
+
+        }
+
+        .green-div1 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 60px;
+            left: 460px;
+        }
+
+        .plus1 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading2 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 170px;
+            left: 230px;
+
+        }
+
+
+        .rate2 {
+            position: absolute;
+            left: 450px;
+            top: 160px;
+        }
+
+
+        .text2 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 200px;
+            left: 230px;
+        }
+
+        .single-line2 {
+            white-space: nowrap;
+
+        }
+
+        .green-div2 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 210px;
+            left: 460px;
+        }
+
+        .plus2 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading3 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 320px;
+            left: 230px;
+
+        }
+
+
+        .rate3 {
+            position: absolute;
+            left: 450px;
+            top: 320px;
+        }
+
+
+        .text3 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 360px;
+            left: 230px;
+        }
+
+        .single-line3 {
+            white-space: nowrap;
+
+        }
+
+        .green-div3 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 370px;
+            left: 460px;
+        }
+
+        .plus3 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading4 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 470px;
+            left: 230px;
+
+        }
+
+        .rate4 {
+            position: absolute;
+            left: 450px;
+            top: 470px;
+        }
+
+        .text4 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 500px;
+            left: 230px;
+        }
+
+        .single-line4 {
+            white-space: nowrap;
+
+        }
+
+        .green-div4 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 520px;
+            left: 460px;
+        }
+
+        .plus4 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .Shop-items2 {
+            width: 115px;
+            height: 82px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 650px;
+            top: 10px;
+
+        }
+
+        .heading5 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 1px;
+            left: 230px;
+        }
+
+        .rate5 {
+            position: absolute;
+            left: 450px;
+            top: 1px;
+        }
+
+        .text5 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 35px;
+            left: 230px;
+        }
+
+        .single-line5 {
+            white-space: nowrap;
+
+        }
+
+        .green-div5 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 50px;
+            left: 460px;
+        }
+
+        .plus5 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading6 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 170px;
+            left: 230px;
+        }
+
+        .rate6 {
+            position: absolute;
+            left: 450px;
+            top: 170px;
+        }
+
+        .text6 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 205px;
+            left: 230px;
+        }
+
+        .single-line6 {
+            white-space: nowrap;
+
+        }
+
+        .green-div6 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 220px;
+            left: 460px;
+        }
+
+        .plus6 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading7 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 310px;
+            left: 230px;
+        }
+
+        .rate7 {
+            position: absolute;
+            left: 450px;
+            top: 310px;
+        }
+
+        .text7 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 345px;
+            left: 230px;
+        }
+
+        .single-line7 {
+            white-space: nowrap;
+
+        }
+
+        .green-div7 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 360px;
+            left: 460px;
+        }
+
+        .plus7 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .heading8 {
+            color: #000;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            position: absolute;
+            top: 470px;
+            left: 230px;
+        }
+
+        .rate8 {
+            position: absolute;
+            left: 450px;
+            top: 470px;
+        }
+
+        .text8 {
+            position: absolute;
+            color: #BFBFBF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 17px;
+            top: 505px;
+            left: 230px;
+        }
+
+        .single-line8 {
+            white-space: nowrap;
+
+        }
+
+        .green-div8 {
+            width: 80px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #61B846;
+            position: absolute;
+            top: 520px;
+            left: 460px;
+        }
+
+        .plus8 {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            width: 48.438px;
+            height: 20.27px;
+            flex-shrink: 0;
+            position: absolute;
+            top: -19px;
+            left: 32px;
+        }
+
+        .veg img {
+            border-radius: 15px;
+            width: 180px;
+            flex-shrink: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            position: absolute;
+            top:460px;
+        }
+    </style>
+    <div id="navbar">
+        <a href="#">
+            <i class="fas fa-home icon"></i> <b>Home</b>
+        </a>
+
+        <a href="#">
+            <i class="fas fa-shopping-cart icon"></i><b>cart</b>
+        </a>
+        <a href="#">
+            <i class="fas fa-user-circle icon"></i> <b>Account</b>
+        </a>
+        <div class="cart-icon">
+            <img src="./images/Cart icon.png">
+        </div>
+
+    </div>
+    <div class="main-content">
+        <h1 class="main-heading">Saylani Welfare</h1>
+        <h2 class="sub-heading">DISCOUNT STORE</h2>
+        <img src="./images/Grocery.png" alt="Supermarket" class="main-image">
+        <div class="search-bar">
+            <button onclick="searchProduct()" class="search-button"><i class="fas fa-search"></i></button>
+            <input type="text" id="product-search" placeholder="Search by product name">
+        </div>
+    </div>
+    <div class="categories">
+        <h2 class="sub-heading">Shop by Category</h2>
+        <div class="category-container">
+            <div class="category">
+                <img src="./images/Rectangle 1.png" alt="Grocery">
+                <p>Grocery</p>
+            </div>
+            <div class="category">
+                <img src="./images/Rectangle 6.png" alt="Vegetables">
+                <p>Vegetables</p>
+            </div>
+            <div class="category">
+                <img src="./images/Rectangle 7.png" alt="Fruits">
+                <p>Fruits</p>
+            </div>
+            <div class="category">
+                <img src="./images/Rectangle 16.png" alt="Spices">
+                <p>Masala</p>
+            </div>
+        </div>
+    </div>
+    <div class="Shop-items">
+        <div class="meat">
+            <img src="./images/Rectangle 17.png">
+        </div>
+        <div class="title1">
+            <h3 class="heading1">Meat</h3>
+            <div class="text1">
+                <p class="single-line">This is product description <br />
+                    This is abc product description</p>
+            </div>
+        </div>
+        <div class="rate1">
+            <h3 class="single-line">Rs.800-per kg</h3>
+        </div>
+        <div class="green-div1">
+            <div class="plus1">
+                <p>+</p>
+            </div>
+        </div>
+        <div class="fish">
+            <img src="./images/Rectangle 20.png">
+        </div>
+        <div class="title2">
+            <h3 class="heading2">Fish</h3>
+            <div class="text2">
+                <p class="single-line2">This is product description <br />
+                    This is abc product description</p>
+            </div>
+        </div>
+        <div class="rate2">
+            <h3 class="single-line2">Rs.450-per kg</h3>
+        </div>
+        <div class="green-div2">
+            <div class="plus2">
+                <p>+</p>
+            </div>
+        </div>
+        <div class="Qeema">
+            <img src="./images/Rectangle 23.png">
+        </div>
+        <div class="title3">
+            <h3 class="heading3">BeefQeema</h3>
+            <div class="text3">
+                <p class="single-line3">This is product description <br />
+                    This is abc product description</p>
+            </div>
+        </div>
+        <div class="rate3">
+            <h3 class="single-line3">Rs.900-per kg</h3>
+        </div>
+        <div class="green-div3">
+            <div class="plus3">
+                <p>+</p>
+            </div>
+        </div>
+        <div class="meat2">
+            <img src="./images/mutton.jpeg">
+        </div>
+        <div class="title4">
+            <h3 class="heading4">Mutton</h3>
+            <div class="text4">
+                <p class="single-line4">This is product description <br />
+                    This is abc product description</p>
+            </div>
+        </div>
+        <div class="rate4">
+            <h3 class="single-line4">Rs.1200-per kg</h3>
+        </div>
+        <div class="green-div4">
+            <div class="plus4">
+                <p>+</p>
+            </div>
+        </div>
+        <div class="Shop-items2">
+            <div class="meat">
+                <img src="./images/download.jpeg">
+            </div>
+            <div class="title5">
+                <h3 class="heading5">Chicken</h3>
+                <div class="text5">
+                    <p class="single-line5">This is product description <br />
+                        This is abc product description</p>
+                </div>
+            </div>
+            <div class="rate5">
+                <h3 class="single-line5">Rs.800-per kg</h3>
+            </div>
+            <div class="green-div5">
+                <div class="plus5">
+                    <p>+</p>
+                </div>
+            </div>
+            <div class="fish">
+                <img src="./images/utensils.jpeg">
+            </div>
+            <div class="title6">
+                <h3 class="heading6">Utensils</h3>
+                <div class="text6">
+                    <p class="single-line6">This is product description <br />
+                        This is abc product description</p>
+                </div>
+            </div>
+            <div class="rate6">
+                <h3 class="single-line6">Rs.350-per Piece</h3>
+            </div>
+            <div class="green-div6">
+                <div class="plus6">
+                    <p>+</p>
+                </div>
+            </div>
+            <div class="Qeema">
+                <img src="./images/Rectangle 14.png">
+            </div>
+            <div class="title7">
+                <h3 class="heading7">Fruits</h3>
+                <div class="text7">
+                    <p class="single-line7">This is product description <br />
+                        This is abc product description</p>
+                </div>
+            </div>
+
+            <div class="rate7">
+                <h3 class="single-line7">Rs.400-per kg</h3>
+            </div>
+            <div class="green-div7">
+                <div class="plus7">
+                    <p>+</p>
+                </div>
+            </div>
+            <div class="veg">
+                <img src="./images/veg.jpeg">
+            </div>
+            <div class="title8">
+                <h3 class="heading8">Vegetables</h3>
+                <div class="text8">
+                    <p class="single-line8">This is product description <br />
+                        This is abc product description</p>
+                </div>
+            </div>
+            <div class="rate8">
+                <h3 class="single-line8">Rs.200-per kg</h3>
+            </div>
+            <div class="green-div8">
+                <div class="plus8">
+                    <p>+</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

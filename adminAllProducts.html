@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin All products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    #navbar {
+      background-color: rgb(99, 224, 99);
+      overflow: hidden;
+    }
+
+    #navbar a {
+      float: left;
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 20px;
+      margin-right: 20px;
+
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: green;
+    }
+
+    .icons {
+      color: white;
+
+    }
+
+    .icons i:hover {
+      color: rgb(11, 58, 15);
+      /* Change the text color on hover */
+      transition: color 0.3s;
+    }
+
+    h4 {
+      color: rgb(9, 9, 196);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 4.5;
+      text-align: center;
+      margin-right: 1400px;
+      font-size: 20px;
+      margin-top: -100px;
+      margin-left: 105px;
+
+    }
+
+    h5 {
+      color: rgb(29, 170, 29);
+      line-height: -1;
+      /* Adjust line spacing for h2 */
+      margin-top: -80px;
+      margin-left: 3px;
+      text-align: center;
+      margin-right: 1400px;
+      margin-top: -60px;
+      font-size: 20px;
+      margin-left: 105px;
+    }
+
+    div img {
+      margin-top: 70px;
+
+    }
+
+    h2 {
+      color: rgb(12, 79, 179);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-left: 180px;
+      font-size: 30px;
+    }
+
+    h3 {
+      color: rgb(29, 170, 29);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-left: 180px;
+      margin-top: -30px;
+    }
+
+    .fruit-button {
+      background-color: white;
+      color: green;
+      border-color: rgb(175, 207, 144);
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s, color 0.3s;
+      /* Adding a smooth transition on hover */
+      height: 80px;
+      width: 300px;
+      margin-bottom: 40px;
+      margin-left: 50px;
+    }
+
+    .fruit-button:hover {
+      background-color: green;
+      color: white;
+    }
+
+
+
+    /* Adding some basic styling for the images */
+    .fruit-image {
+      max-width: 50px;
+      max-height: 50px;
+      margin-right: 10px;
+      margin-bottom: 60px;
+    }
+
+    .bre {
+      color: rgb(167, 160, 160);
+      margin-left: 60px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <a href="#">
+      <i class="fas fa-home icon"></i> <b>Home</b>
+    </a>
+
+    <a href="#">
+      <i class="fas fa-plus"></i> <b>Add items</b>
+    </a>
+    <a href="#">
+      <i class="fas fa-user-circle icon"></i> <b>Account</b>
+    </a>
+  </div>
+  <!--<div class="icons">
+        <i class="fas fa-cog"></i> 
+        <i class="fas fa-plus-circle"></i>
+      </div>-->
+  <div>
+    <img src="./images/logo.png" height="100" width="100">
+  </div>
+  <h4>Urooj.Khalid</h4>
+  <h5>Sales</h5>
+
+  <h2>All Products</h2>
+  <h3>Fruits</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="https://w7.pngwing.com/pngs/265/75/png-transparent-ipod-touch-apple-icon-format-icon-large-red-apples-closeup-of-red-apples-natural-foods-food-eating.png"
+          alt="Apple" class="fruit-image" height="50" width="50">
+        Apple
+        <br>&nbsp;&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$2.1</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhIWFRUVFxUXFRYVFRcVFRUXFRcWFhUXFRUYHSggGholHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lHyYtLS0tLi8tLSsvLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0uLSstLS0tLS0tLS0tLS0tLf/AABEIALcBFAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQMCBAUGBwj/xAA/EAACAQIDBAYHBwIFBQAAAAAAAQIDEQQhMQUSQVEGE2FxgZEiMmKhscHwBxRCUnLR4SOCM0OisvEWJFNzkv/EABoBAQACAwEAAAAAAAAAAAAAAAABAwIEBQb/xAArEQACAgEDAwIGAgMAAAAAAAAAAQIDEQQSIRMxQQVRIiMyQnGRYdFSgbH/2gAMAwEAAhEDEQA/APuIAAAAAAAAAAAAAAAAAAAAAAABAJAAAAAAAAAABDJAAAAAAAAAAAAAAAAAAAAAAAAIYBJAJAAAAABqY3F9Xa+6k75ye6m+Cvw4kSaSywbYNHZm1qVdPcl6UfWi/WjbLNcu1ZG8IyUllAAENkgkickldtJLi8keT250v3X1eHSk3lvv1f7Vx73l3nlMXiatedqlSUra3eS7lovAplcl25K5WJdj6JW6RYWGteP9t5f7UyqPSnCP/OXjGa+MT5zKj5L3mvKlfsS9/cV9dlfWZ9Zw+2cPP1K9Nvlvxv5XubyZ8V6m/Yvj9czLCY+vR/wakoJcnk/7XkyVqPdEq73R9oB81wP2jzptQxNPrPapq07c9zR+491sjbNDEx3qNRS5x0nH9UXmi2NkZdmWRnGXY6AALDMAAAAAAAEAEgAAAAAAAAAAAAAAAAAAAAFdejGcXCcVKMlZxkk01yaepYAD5/tjobVw8uv2fJ5O7ouXpLn1U3/tfnwOj0e6a06i3MT/AE6kcm5LdTa1Uk/Vl2ad2h688t0w6KRxKdWkkq6XcqqX4Ze1yl4PLTVnVKv4qv14B0f+psM3anN1WuFGMqj/ANKNDbcsRioqnSp1IU367klCUuSalJNR52vf46vQjpAmlhKq3KlP0Ibys3u5bklwmreNvP2EpJZvQyg+pHO7j9f2Q1ng+T7Rj91dq8KkXwe4mn+mSlZmtDadDTrN2/5lJXv22a959F2xtODi4dWqkXqpq8X/AGs+bbU2LGTvCLhndJZxXg9PM5t2pqhLCkHorcZijoW384tSiuMWpLu9HQ16nbp+3I89LZ9Sk21dZZODaazT7y6ntapkp2qr2vXy9pZ+dyY3ZWe/4NOUXF4ksM7CzWeSt593YKa3nlZRXHLxsij73TqS3ZNwa4S9V2v+JfstCMS55JK0dd6942XJrLyMuoiMGGL3btQjm7aLN8DnVMJUptVI1HTks1KLaku5rQ6FOvGC529/Err03Uzm92PBfif7ByMT0PRn7StxxpY53TyVZKzX/siuHtL36n02jVjOKlGSlGSTUotNNPRprVH502pSgso/Xezp9C+mlXZ8lCSlUwzfpQtnC+sqXbxcdH2PMvp1XO2RZXfh4kfewUYHGQrU41aUlKE0pRktGn9aF50DcAAAIRIAAAAAAAAADAAAAAAAAAAAAABAJAAAAPCfaJs2MXDEwTU21GW7k5SVurat+JWefYuR0dnYytUpQVaScks2lbe7Wuf1ZHR27Xu1T4ZSl25+ivdfyNTDo8/rr/nOuHC8m7RUlHeyxYdPUrns6JtRkTc11XB+C3fI5GI2RF8DgbS2BF5uOfPR+aPasqq00yHSlzHhh4msSWT5Vj9lTTvHO3Djnrmc+hVqUpNZrJ5NZPLK8XlyPq+I2fF8DibQ2EnwX1y5E9aUfrWTUs0EZc1vB4zD4ynJ+ktxpXTj6uurjqn2ryM66k17PCSd4+fPsLto7BcW2lb3rP67TlRqVKLfC6tzTs08+D4l0bIzXws59tE6/rX+yzcjFdvF/sczFU76Lx+vA61HcqLL0ZcIt+g+58O55dpVVotZNWfLkHlGu4nT6AdNJYCXUV7yw0pN340W3nJc4vivFZ3T+4UqiklKLTjJJpp3TTzTT4o/NmKoXPe/ZN0qcJLAVn6Lu6Em/Verpdzza8VxR0dJqPtZdTZh7WfWAAdE2wAAAAAAAAAQCQAAAAAAAAAAAAACitiox1efJGlV2m/wpL3mvbqaq/qZZGqUuyOoDhzx03+LysVvFz/O/M1X6pV4TLVpZe5qbXq/9xNct1f6U/mZQmc/GTbqtt3bs7vut8i+lM85qLd10pLyzpqvEEv4OhCZapGjCrmXxqllduSmUDYuQ2V7wci/eYbSZSKZkyZU5GE5ZLIoqr4ZS1Rwto7CUr2X12nod4xbK1gyaysM+a7R2FKGccvh/BrUqsr7lSLtrnqln6r5eaPpeIw0Z5NHGxWzqcv6U01F6TXrU3wlHn3cbeK2qrXnbPt7nPv0MXmVfD9vB4zHUFrHNaXXB3eTWt/d3nKqxlGSlFuMotOLXBp3TXLNXOttDCVcLWlSq6rNSXq1IPSUecX/ABwNStZ5rxXLu7DYcXFnIcT7j0Q24sbhadbLe9Wol+GpH1l3PJrskjtHyz7G8ZapiKDeUoxqRXJxe5N+O9DyPqZ2qJ74Jm3CWY5AALTMAAAgEgAAAAAAAAAAAgrxFdQi5S0+PYiG0llkpZ4RlVqKKu3ZHJxO0nLKOS97NPF42VR9nBcjCnT4s4Wq9RlOWyrt7m/Vp1FZn3MnIxbLkkE0c9wb7suya7kYO5sztyKpFEoYM4s5+MWafgZ0HxM8TDLM0oVeBrvh8myuYm9v5/AshKxqwmWKRCk0zBxNqNQy3zUU7GSqFyt4MHAvnMwmyucyN4OeSVEyuTGRUpGSYUiWi2eZp4mnkbKkYTM3NmKibWzMNRxVPqMTTjU3M4byzSeu7LVeD5HL259mlGUXLCSdKa0jKTlTl2Xd5R77vuNrDVXCamtU/wDn3HsKVRSSktGro9DobIX14l3Ry9XQlLOO58h6GYStgtp04V6bpuoqlPP1XdbycWsmnKMVlzPsJyukeyFiaSSsqtOSqUZ/lqQd437G1Z/wjqI3qq+nmPg1Yx28EgAuMgAAAAAAAAAAAAQCQCG7anl9pbQ6yWWiyivmdTpBid2G6tZfBa/I85TWZwfV9W4/Ki/ydHRU8b2btCPE2UUU2ZuRzILai+XLMpMi5W2VzqEuWAomcplbmYORi5GvKwtUSKsrnPm7M25yNWvmjXy92TYguC2nItgzRw9a+XFG3CRbtTWTFrBY0IswlIyRjtwQWGMiExKRJGCFLtLFIpRk5kktF1wyuMjLfM+5jgxkd7o/i7p03wzXzRwmZ4atuSUlwZtaK90WqXjyVX1dSGD2YMKNVSipLRq5ketTyso4j4BIBIAAAAAAAAAAAAAAAPJ9I696zj+VJfP5mlSnazJ2u/6837TXkzXgzxfqMm9RKX8ne08flpHRjWSIliORpqQzNXrzawZ9NF3XNkdYV2ZCI+N9zLai1SMZSMURcyUWMGLKKsi6Rr1IjYZpmlKe7K68TfpVb5mjUSIo1d124F9cOCJcnWTLIs16TyvwLVPgW9PyV5LpvgYNGKZlvGDhknsYWBNyLEbSTNMbxXcghojBdvEyKSXIyQwek6PYm6dO+ma+Z2TxODxDhNSXD6sz2dGqpRUlo0ej9O1Csr2+V/w5Gsq2T3eGZgA6JqAAAAAAAEEgAAAAAAHjekNPdry5OzXj/KZz6bzPRdMME5UnWgrypJtx4yhrJLtVrrxPG4HaUKsd6D71xT5NHm/UdK1Nyxwzs6S1Sgl5OrEtguLKKWly3fOZ01E2m8ibuRbIlsXGAYpEGTZW5kpAiTKqjMpMorTMlEk1aisa+8TiKpt7K2ROraUvQhzesv0r5v3m1TVKTwjCc1FZZsbIhUqXjCG8oq77OzvfIvselwMYUoqEFZLzb5t8WVY/Axq+kvRnz4P9X7nRt0GY5i+TQjq1u5XBwFIm5Nek4vdkrP49qfErucxxw8M3lJNZRkmZSZS2TvkYRkZbwjIrbCkYSiSi5SDa0Kd4bxjtZlgubsd3ozjs3Sb1zj4ar5+B5yUycNiXCUZrWLT8uBfppyptUv3+Cu6pWQcT6ICqjWUoqS0kk13NXRaerTyeeABABIIsACQAAAAAADldI61SNCfVtRluyd3e6UVdqPtWMZy2ptg8t056RubeEoXe892o45uTeXVxt7/Lmc6j0GqxjGrGpGNXR03o4Zvdc1kpea7TrdDtiRoxVes1101lG/8AhRfD9b4vhpzv3a+I5M1VX1E3Z58exZXKUHlHjKdV03uTThLlJW8VzXabkMSjp4zemrOO8uTV15M4WK2TLWFNxfsuy8nkcy7015zFnTr1if1I3etXMh1lzODVwOM/DHz/AIMFsraD4QXn+5pvRWrwXq+v3O5LELmVTxkeZyo9GcdLWrFd0f3Nin0IrP16833O3wM46Gwh6mteTKvtFJXbsubdjk1dsKTtC832aeZ6Oh0EprOV5P2m38Tr4bo3ThpFGzXoH9xVLWL7UeY2TQk2pSjd8E9F4cT1eHcnqbdPZyXA2IYc6NVWxYRpWWObyyiCZmpWNmNEzWHL0mVNo0K7jJWmk12/J8DkYrBuOcHvLk9V48T0ssGatfZtyq6iNi+JGddrh2Z5ffWnHk8iWjo43o45aSaOc+jmKhfcqqXJTjf4M5ktDYn8Jux1UfJLjZdpWkYPZmPWsKcu6Ul7rMyWCxn/AIY//f8ABU9Pb/iXR1EPcmxizOOzsY/8qK75/wAG9g9iV/xqPcmzKGktfjAlqq15ObuSllGLb5JXOvsvo7KTUqz3V+VO8n3vgvf3HYwmznHs7jo0qNjoU6CEeZ8mnbrZPiPBbTVkksksl2FqMYxMzpHPIJAAAAAAAAAAABjKF8nmSSAa8sJD8qI+6x5GyCMInJq/dlyH3ZcjZJsNoyav3Zch1C5GzYWI2onczX6lE9Ui8WG1EZKOqHVF9hYbRko6odUX2FhtGSpUjJQLATgZMd0bhkBggr6sdWWAYJyV9WOrLAMDJXuE7hmBgZMVEmxIJIAAAAAAAAAAAABAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIJAAAAAAAAAAAP/9k="
+          alt="Mango" class="fruit-image" height="50" width="50">
+        Mango
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 100px;">$5.3</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="https://w7.pngwing.com/pngs/945/573/png-transparent-kiwi-fruit-illustration-juice-smoothie-kiwifruit-kiwi-natural-foods-food-citrus-thumbnail.png"
+          alt="Kiwi" class="fruit-image" height="50" width="50">
+        Kiwi
+        <br>&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$4.0</span>
+      </button>
+    </div>
+
+
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="https://icon2.cleanpng.com/20171221/xxw/pineapple-png-vector-clipart-image-5a3bb61646dc16.9279863515138626782903.jpg"
+          alt="Apple" class="fruit-image" height="50" width="50">
+        PineApple
+        <br>1. Kg
+        <br><span class="bre" style="margin-left: 90px;">$9.1</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA0EhwuVOYFYJeccpgeY2kgE5kRdtwWh1aZA&usqp=CAU"
+          alt="Mango" class="fruit-image" height="50" width="50">
+        Pomegrante
+        <br>1. Kg
+        <br><span class="bre" style="margin-left: 70px;">$4</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="https://icon2.cleanpng.com/20171221/exq/red-orange-png-vector-clipart-image-5a3c5aab4dfe87.4831750715139048113195.jpg"
+          alt="Kiwi" class="fruit-image" height="50" width="50">
+        orange
+        <br>&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$2.0</span>
+      </button>
+    </div>
+
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img src="https://freepngimg.com/save/174366-fruits-free-transparent-image-hd/1024x768" alt="Apple"
+          class="fruit-image" height="50" width="50">
+        Banana
+        <br>&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$2.2</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="./images/straw.jpeg"
+          alt="Strawberry" class="fruit-image" height="50" width="50">
+        Strawberry
+        <br>1. Kg
+        <br><span class="bre" style="margin-left: 70px;">$5.9</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img
+          src="https://w7.pngwing.com/pngs/467/70/png-transparent-sliced-watermelon-fruit-mudslide-watermelon-graphy-fruit-watermelon-food-melon-fruit-nut.png"
+          alt="Watermelon" class="fruit-image" height="50" width="50">
+        Watermelon
+        <br>1. Kg
+        <br><span class="bre" style="margin-left: 70px;">$4.3</span>
+      </button>
+    </div>
+
+  </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img src="https://i.pinimg.com/originals/72/69/63/726963c9834c494f62e59244ac0c0349.png" alt="Apple"
+          class="fruit-image" height="50" width="50">
+        Cherry
+        <br>&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$2.1</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img src="https://www.citypng.com/public/uploads/preview/-5161651699656rhkumbbv.png" alt="Mango"
+          class="fruit-image" height="50" width="50">
+        Dates
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 100px;">$6.3</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+      <button class="fruit-button">
+        <img src="https://www.publicdomainpictures.net/pictures/490000/nahled/peer-fruit-png.png" alt="Kiwi"
+          class="fruit-image" height="50" width="50">
+        Pear
+        <br>&nbsp;&nbsp;1. Kg
+        <br><span class="bre" style="margin-left: 110px;">$4.0</span>
+      </button>
+    </div>
+    <div style="margin: 10px;">
+
+    </div>
+  </div>
+</body>
+
+</html>
