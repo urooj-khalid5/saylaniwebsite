@@ -28,6 +28,20 @@
       background-color: #ddd;
       color: green;
     }
+    .notes-icon {
+            position: absolute;
+            left: 1290px;
+            top: -60px;
+
+        }
+
+        .notes-icon img {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
 
     .icons {
       color: white;
@@ -127,16 +141,19 @@
 
 <body>
   <div id="navbar">
-    <a href="#">
+    <a href="./adminAllProducts.html">
       <i class="fas fa-home icon"></i> <b>Home</b>
     </a>
 
-    <a href="#">
+    <a href="./AdminAddNewItem.html">
       <i class="fas fa-plus"></i> <b>Add items</b>
     </a>
-    <a href="#">
+    <a href="./adminsettings.html">
       <i class="fas fa-user-circle icon"></i> <b>Account</b>
     </a>
+  </div>
+  <div class="notes-icon">
+    <a href="./adminOrders.html"><img src="./images/notes.png"></a>
   </div>
   <!--<div class="icons">
         <i class="fas fa-cog"></i> 
@@ -228,9 +245,7 @@
     </div>
     <div style="margin: 10px;">
       <button class="fruit-button">
-        <img
-          src="./images/straw.jpeg"
-          alt="Strawberry" class="fruit-image" height="50" width="50">
+        <img src="./images/straw.jpeg" alt="Strawberry" class="fruit-image" height="50" width="50">
         Strawberry
         <br>1. Kg
         <br><span class="bre" style="margin-left: 70px;">$5.9</span>

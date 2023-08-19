@@ -35,10 +35,11 @@
             margin-right: 20px;
 
         }
+
         .cart-icon {
             position: absolute;
-            left: 1300px;
-            top: 5px;
+            left: 1280px;
+            top: 8px;
 
         }
 
@@ -704,22 +705,22 @@
             flex-shrink: 0;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             position: absolute;
-            top:460px;
+            top: 460px;
         }
     </style>
     <div id="navbar">
-        <a href="#">
+        <a href="./usermain.html">
             <i class="fas fa-home icon"></i> <b>Home</b>
         </a>
 
-        <a href="#">
+        <a href="./usershoppingcart.html">
             <i class="fas fa-shopping-cart icon"></i><b>cart</b>
         </a>
-        <a href="#">
+        <a href="./userSetting.html">
             <i class="fas fa-user-circle icon"></i> <b>Account</b>
         </a>
         <div class="cart-icon">
-            <img src="./images/Cart icon.png">
+            <a href="./adminOrders.html"><img src="./images/Cart icon.png"></a>
         </div>
 
     </div>
@@ -902,7 +903,45 @@
             </div>
         </div>
 
-        <script src="script.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
+        <script type="text/javascript">
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyDF7xdYTZDlGUh7R1q1_RhwRc5eQKiKnsE",
+                authDomain: "saylaniwebsite-f4421.firebaseapp.com",
+                databaseURL: "https://saylaniwebsite-f4421-default-rtdb.firebaseio.com",
+                projectId: "saylaniwebsite-f4421",
+                storageBucket: "saylaniwebsite-f4421.appspot.com",
+                messagingSenderId: "952338450713",
+                appId: "1:952338450713:web:529a02ac57494d46061d88",
+                measurementId: "G-PB5Y9NPBQ4"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            // Initialize Realtime Database and get a reference to the service
+            const database = firebase.database();
+            function isAuthenticated() {
+                const user = sessionStorage.getItem('user');
+                return user !== null;
+            }
+
+            // Check if the user is authenticated
+            if (!isAuthenticated()) {
+                window.location.href = './salessignin.html';
+            }
+
+            const logout = () => {
+                sessionStorage.removeItem('user');
+                console.log('loging out....');
+                window.location.href = './salessignin.html';
+            }
+
+
+        </script>
 </body>
 
 </html>

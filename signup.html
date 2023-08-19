@@ -147,7 +147,7 @@
       <!-- <button onclick="logIn()">Login</button> -->
     </div>
     <h6 style="margin-bottom: -20px; margin-top: -5px; font-size: 15px; color:blue;">Already have an account?<a
-        href=salessignin.html style="color:blue;text-decoration: none;">Login</a>
+        href="./salessignin.html" style="color:blue;text-decoration: none;">Login</a>
   </h4>
 
 
@@ -161,6 +161,7 @@
     const firebaseConfig = {
       apiKey: "AIzaSyDF7xdYTZDlGUh7R1q1_RhwRc5eQKiKnsE",
       authDomain: "saylaniwebsite-f4421.firebaseapp.com",
+      databaseURL: "https://saylaniwebsite-f4421-default-rtdb.firebaseio.com",
       projectId: "saylaniwebsite-f4421",
       storageBucket: "saylaniwebsite-f4421.appspot.com",
       messagingSenderId: "952338450713",
@@ -174,40 +175,40 @@
     const database = firebase.database();
 
     const signup = () => {
-    let username = document.getElementById('username').value;
-    let contact = document.getElementById('contact').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let role = 'User'
+      let username = document.getElementById('username').value;
+      let contact = document.getElementById('contact').value;
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+      let role = 'User'
 
-    console.log(email, password)
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+      console.log(email, password)
+      firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            let user = userCredential.user;
-            firebase.database().ref('users/' + user.uid).set({
-                uid: user.uid,
-                username: username,
-                role: role,
-                contact: contact,
-                email: email,
-                password: password
+          let user = userCredential.user;
+          firebase.database().ref('users/' + user.uid).set({
+            uid: user.uid,
+            username: username,
+            role: role,
+            contact: contact,
+            email: email,
+            password: password
+          })
+            .then(() => {
+              const user = { email: email };
+              sessionStorage.setItem('user', JSON.stringify(user));
+              console.log('User created successfully.')
+              window.location.href = './usermain.html'
             })
-                .then(() => {
-                    const user = { email: email };
-                    localStorage.setItem('user', JSON.stringify(user));
-                    console.log('User created successfully.')
-                    window.location.href = ''
-                })
-                .catch((error) => {
-                    console.log(error);
-                })
+            .catch((error) => {
+              console.log(error);
+            })
         })
         .catch((error) => {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            console.log(errorCode + ': ' + errorMessage)
+          let errorCode = error.code;
+          let errorMessage = error.message;
+          console.log(errorCode + ': ' + errorMessage)
         });
-}
+    }
 
     // function logIn() {
     //     let email = document.getElementById("name").value;
